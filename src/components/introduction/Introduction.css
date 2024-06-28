@@ -1,0 +1,11 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-color: var(--primary-color);
+}
+
+.container {
+  max-width: 1200px;
+}
