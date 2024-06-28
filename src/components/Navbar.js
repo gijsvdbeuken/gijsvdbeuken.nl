@@ -12,10 +12,7 @@ export const Navbar = () => {
             Portfolio
           </Link>
           <Link className="navbar-link" to="/about">
-            Over mij
-          </Link>
-          <Link className="navbar-link" to="/about">
-            Archives
+            Over
           </Link>
         </div>
         <div className="navbar-contact">
