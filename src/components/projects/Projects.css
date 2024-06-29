@@ -1,0 +1,10 @@
+.projects-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.projects-container {
+  max-width: 1000px;
+}

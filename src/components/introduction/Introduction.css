@@ -1,4 +1,4 @@
-.wrapper {
+.introduction-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,6 +6,6 @@
   background-color: var(--primary-color);
 }
 
-.container {
+.introduction-container {
   max-width: 1200px;
 }

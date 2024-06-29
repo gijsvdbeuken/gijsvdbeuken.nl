@@ -1,15 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
 :root {
+  /*fonts*/
+  --font-family: "Plus Jakarta Sans", sans-serif;
   --font-light: 200;
   --font-regular: 400;
   --font-bold: 700;
   --font-extra-bold: 800;
-  --font-family: "Plus Jakarta Sans", sans-serif;
-  --primary-color: #262626;
-  --secondary-color: #cccccc;
-  --secondary-color-opacity-20: rgba(204, 204, 204, 0.2);
-  --hover-color: #ffffff;
+
+  /*colors*/
+  --primary: #262626;
+  --secondary: #cccccc;
+  --secondary-faded-50: rgba(204, 204, 204, 0.5);
+  --paragraph: rgba(204, 204, 204);
+  --hover: #ffffff;
 }
 
 * {
@@ -20,10 +24,13 @@ body,
 html {
   margin: 0;
   padding: 0;
+  background-color: var(--primary);
+  font-family: var(--font-family);
+  font-weight: var(--font-regular);
 }
 
 h1 {
-  color: var(--secondary-color);
+  color: var(--secondary);
   font-family: var(--font-family);
   font-weight: var(--font-regular);
   font-size: 60px;
@@ -32,7 +39,7 @@ h1 {
 }
 
 h2 {
-  color: var(--secondary-color);
+  color: var(--secondary);
   font-family: var(--font-family);
   font-weight: var(--font-regular);
   font-size: 36px;
@@ -40,12 +47,30 @@ h2 {
   margin: 10px 0px;
 }
 
-.btn {
-  all: unset;
-  color: var(--secondary-color);
+h3 {
+  color: var(--secondary);
   font-family: var(--font-family);
   font-weight: var(--font-regular);
-  border: 1px solid var(--secondary-color);
+  font-size: 96px;
+  line-height: 1.25em;
+  margin: 10px 0px;
+}
+
+p {
+  color: var(--paragraph);
+  font-family: var(--font-family);
+  font-weight: var(--font-regular);
+  font-size: 22px;
+  line-height: 1.5em;
+  margin: 10px 0px;
+}
+
+.btn {
+  all: unset;
+  color: var(--secondary);
+  font-family: var(--font-family);
+  font-weight: var(--font-regular);
+  border: 1.5px solid var(--secondary-faded-50);
   cursor: pointer;
   background-color: none;
   padding: 20px 40px;
@@ -56,6 +81,33 @@ h2 {
 }
 
 .btn:hover {
-  color: var(--hover-color);
-  border: 1px solid var(--hover-color);
+  color: var(--hover);
+  border: 1.5px solid var(--hover);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  position: relative;
+  color: var(--secondary);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  border: 1.5px solid var(--secondary-faded-50);
+  padding: 1em 2em;
+  border-radius: 100px;
+}
+
+input[type="radio"]:checked + label:before {
+  height: 1em;
+  width: 1em;
+  border: 0.65em solid var(--primary);
+  background-color: var(--secondary);
+}
+
+input[type="radio"]:checked + label {
+  background-color: var(--secondary);
+  color: var(--primary);
 }
